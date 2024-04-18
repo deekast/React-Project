@@ -1,0 +1,28 @@
+{
+    "pottery": [
+      {
+        "id": "1",
+        "name": "Classic Vase",
+        "vesselType": "Vase",
+        "clayBody": "Porcelain",
+        "glaze1": "Blue Gloss",
+        "glaze2": "Matte White",
+        "stage": "To Throw",
+        "comments": "First attempt at new design",
+        "imgUrl": "/images/vase1.jpg"
+      },
+      {
+        "id": "2",
+        "name": "Modern Bowl",
+        "vesselType": "Bowl",
+        "clayBody": "Stoneware",
+        "glaze1": "Red Gloss",
+        "glaze2": "Transparent",
+        "stage": "Finished",
+        "comments": "Second firing complete",
+        "imgUrl": "/images/bowl1.jpg"
+      }
+      // more items...
+    ]
+  }
+  
