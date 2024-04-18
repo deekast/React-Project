@@ -7,8 +7,12 @@ To do
     - add fields prettier 
     - gallery more of a gallery 
 
-- id needs to be unique and sequential 
 - make a home page?
 - edit button and functionality 
 - 
+
+
+functionality 
+- edit button 
+- delete button 
 

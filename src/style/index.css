@@ -1,0 +1,113 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* This ensures the flex items are aligned vertically */
+    align-items: center; /* This centers the content horizontally */
+    justify-content: center; /* This centers the content vertically if needed */
+}
+
+.container {
+    width: 100vw; /* Viewport Width - makes the container the width of the viewport */
+    max-width: 100%; /* Ensures it doesn't exceed the parent's width */
+    overflow-x: hidden; /* Prevents any child elements from causing horizontal scrolling */
+}
+
+
+.navbar {
+    width: 100%;
+    background-color: #f0f0f0;  
+    padding: 10px 0;  
+    box-sizing: border-box;  
+    position: fixed;  
+    top: 0; 
+    left: 0;  
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    display: inline; /* Display items inline */
+    margin-right: 10px; /* Spacing between items */
+}
+
+.navbar a {
+    text-decoration: none; /* Remove underline from links */
+    color: black; /* Set text color for links */
+    padding: 10px 20px; /* Padding around text to increase clickable area */
+    border: 1px solid black; /* Add border to mimic button */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.navbar a:hover {
+    background-color: #ddd; /* Change background on hover */
+    color: black;
+}
+
+.pottery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Creates as many columns as can fit */
+    gap: 20px; /* Space between grid items */
+    padding: 20px;
+}
+
+.pottery-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box; 
+}
+
+
+.pottery-item img {
+    width: 100%; 
+    height: auto; 
+    display: block; 
+}
+
+.form-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    min-height: 80vh;  
+}
+
+.pottery-form {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 50%;  
+    box-sizing: border-box;
+}
+
+.pottery-form input,
+.pottery-form select {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.pottery-form label {
+    margin-bottom: 5px;
+    display: block;
+    font-weight: bold;
+}
+
+#pot-id {
+    display: none;
+}
+

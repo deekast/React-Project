@@ -53,7 +53,8 @@ function handleSubmit(event) {
     }
 
     return (
-        <form className='pot-form' onSubmit={handleSubmit}>
+    <div className ="form-container">
+        <form className='pottery-form' onSubmit={handleSubmit}>
             <h2>Add New Pots</h2>
 
             <label htmlFor="imgUrl">Image URL:</label>
@@ -98,6 +99,7 @@ function handleSubmit(event) {
 
             <button type="submit">Add Pot</button>
         </form>
+        </div>
     );
 }
 

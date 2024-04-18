@@ -1,17 +1,16 @@
-// src/components/PotteryContainer.jsx
+// Your PotteryContainer component should ideally look something like this:
 import React from "react";
 import Pot from "./Pot";
 
-
 function PotteryContainer({ pots, updatePotStage }) {
-  const mappedPots = pots.map(pot => (
-    <Pot key={pot.id} pot={pot} updatePotStage={updatePotStage} />
-  ));
-
   return (
-    <>
-      {mappedPots}
-    </>
+    <div className="pottery-grid">
+      {pots.map(pot => (
+        <div key={pot.id} className="pottery-item">
+          <Pot pot={pot} updatePotStage={updatePotStage} />
+        </div>
+      ))}
+    </div>
   );
 }
 
