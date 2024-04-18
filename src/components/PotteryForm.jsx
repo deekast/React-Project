@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 
-// Default form data for easy resets
-const defaultFormData = {
-    id: '',
+
+
+function PotteryForm({ setPots, pots }) {const [formData, setFormData] = useState({
     name: '',
     vesselType: '',
     clayBody: '',
@@ -11,28 +11,41 @@ const defaultFormData = {
     stage: '',
     comments: '',
     imgUrl: ''
-};
+});
 
-function PotteryForm({ setPots }) {
-    const [formData, setFormData] = useState(defaultFormData);
+const defaultImageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOWiBGsBpLmmAl-yaGwzepDwrbKxcWhdJFyQ&s";
 
-    function handleSubmit(event) {
-        event.preventDefault();
+function handleSubmit(event) {
+    event.preventDefault();
+
+    // Determine the next ID
+    const nextId = pots.length > 0 ? Math.max(...pots.map(pot => parseInt(pot.id, 10))) + 1 : 1;
+
+    const newPot = {
+        ...formData,
+        id: nextId,  // Set the next ID
+        imgUrl: formData.imgUrl || defaultImageUrl  // Use default image if none provided
+    };
+
         fetch('http://localhost:3000/pottery', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
             },
-            body: JSON.stringify(formData)
+            body: JSON.stringify(newPot)
         })
         .then(res => res.json())
         .then(newPotObj => {
-            setFormData(defaultFormData); // Reset form
-            setPots(pots => [...pots, newPotObj]); // Update pots list
+            setFormData({ // Reset the form
+                name: '', vesselType: '', clayBody: '', glaze1: '', glaze2: '', stage: '', comments: '', imgUrl: ''
+            });
+            setPots(pots => [...pots, newPotObj]);  
+            alert("Success: Pot added to the database!");
         })
         .catch(error => console.error('Error adding new pottery:', error));
     }
+
 
     function handleInputChange(event) {
         const { name, value } = event.target;

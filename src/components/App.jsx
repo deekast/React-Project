@@ -53,7 +53,7 @@ function App() {
             <PotteryContainer pots={selectedStage === "All" ? pots : pots.filter(pot => pot.stage === selectedStage)} updatePotStage={updatePotStage} />
           </div>
         } />
-        <Route path="/add-pottery" element={<PotteryForm setPots={setPots} />} />
+        <Route path="/add-pottery" element={<PotteryForm pots = {pots} setPots={setPots} />} />
       </Routes>
     </div>
   );
