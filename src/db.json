@@ -1,28 +1,26 @@
 {
-    "pottery": [
-      {
-        "id": "1",
-        "name": "Classic Vase",
-        "vesselType": "Vase",
-        "clayBody": "Porcelain",
-        "glaze1": "Blue Gloss",
-        "glaze2": "Matte White",
-        "stage": "To Throw",
-        "comments": "First attempt at new design",
-        "imgUrl": "/images/vase1.jpg"
-      },
-      {
-        "id": "2",
-        "name": "Modern Bowl",
-        "vesselType": "Bowl",
-        "clayBody": "Stoneware",
-        "glaze1": "Red Gloss",
-        "glaze2": "Transparent",
-        "stage": "Finished",
-        "comments": "Second firing complete",
-        "imgUrl": "/images/bowl1.jpg"
-      }
-      // more items...
-    ]
-  }
-  
+  "pottery": [
+    {
+      "id": "1",
+      "name": "Classic Vase",
+      "vesselType": "Vase",
+      "clayBody": "Porcelain",
+      "glaze1": "Blue Gloss",
+      "glaze2": "Matte White",
+      "stage": "To Bisque Fire",
+      "comments": "First attempt at new design",
+      "imgUrl": "https://i0.wp.com/www.creativehandsstudio.net/wp-content/uploads/2018/01/pottery.jpg?fit=1024%2C698&ssl=1"
+    },
+    {
+      "id": "2",
+      "name": "Modern Bowl",
+      "vesselType": "Bowl",
+      "clayBody": "Stoneware",
+      "glaze1": "Red Gloss",
+      "glaze2": "Transparent",
+      "stage": "Finished",
+      "comments": "Second firing complete",
+      "imgUrl": "https://i.etsystatic.com/38712031/r/il/c6e89b/4875001555/il_570xN.4875001555_5u8l.jpg"
+    }
+  ]
+}
